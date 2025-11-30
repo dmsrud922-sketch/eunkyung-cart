@@ -1,67 +1,167 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>사서 은경이의 장바구니</title>
-    <style>
-        body {
-            font-family: 'Noto Sans KR', sans-serif;
-            margin: 0;
-            padding: 20px;
-            background: #fafafa;
-            color: #333;
-        }
-
-        h1 {
-            text-align: center;
-            margin-bottom: 30px;
-            color: #444;
-        }
-
-        .category {
-            margin: 25px 0;
-        }
-
-        .category h2 {
-            background: #e8e8e8;
-            padding: 10px;
-            border-radius: 6px;
-        }
-
-        ul {
-            list-style-type: none;
-            padding-left: 10px;
-        }
-
-        li {
-            margin: 8px 0;
-        }
-
-        a {
-            text-decoration: none;
-            color: #0077cc;
-        }
-
-        a:hover {
-            text-decoration: underline;
-        }
-    </style>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>사서 은경이의 장바구니</title>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&family=Nanum+Gothic&display=swap');
+    body {
+        font-family: 'Nanum Gothic', sans-serif;
+        background: #fff8f0;
+        color: #555;
+        margin: 0; padding: 20px;
+    }
+    h1 {
+        font-family: 'Nanum Pen Script', cursive;
+        font-size: 3rem;
+        text-align: center;
+        margin-bottom: 10px;
+        color: #ff6f91;
+        text-shadow: 1px 1px 3px #ffa3b1;
+    }
+    p {
+        text-align: center;
+        font-size: 1.2rem;
+        margin-bottom: 30px;
+        color: #ff8fa3;
+    }
+    .category {
+        background: #fff0f6;
+        border-radius: 12px;
+        margin-bottom: 20px;
+        box-shadow: 0 4px 8px rgba(255,111,145,0.2);
+        padding: 12px 18px;
+    }
+    .category h2 {
+        cursor: pointer;
+        margin: 0 0 12px;
+        font-size: 1.5rem;
+        color: #ff385c;
+        display: flex;
+        align-items: center;
+        user-select: none;
+    }
+    .category h2 span {
+        margin-right: 8px;
+        font-size: 1.8rem;
+    }
+    ul {
+        list-style: none;
+        padding-left: 0;
+        margin: 0;
+        transition: max-height 0.3s ease;
+        overflow: hidden;
+    }
+    ul.hidden {
+        max-height: 0;
+        padding: 0;
+        margin: 0;
+    }
+    li {
+        background: #fff;
+        border-radius: 10px;
+        margin-bottom: 12px;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        padding: 10px 15px;
+        box-shadow: 0 3px 6px rgba(255,111,145,0.25);
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    li:hover {
+        transform: translateX(6px);
+        box-shadow: 0 6px 12px rgba(255,111,145,0.4);
+    }
+    li img {
+        width: 70px;
+        height: 70px;
+        border-radius: 10px;
+        object-fit: cover;
+        box-shadow: 0 2px 6px rgba(255,111,145,0.3);
+    }
+    li a {
+        color: #ff385c;
+        font-weight: 600;
+        text-decoration: none;
+        font-size: 1.1rem;
+        flex: 1;
+    }
+    li a:hover {
+        text-decoration: underline;
+    }
+</style>
 </head>
 <body>
 
-    <h1>📚 사서 은경이의 장바구니</h1>
+<h1>📚 사서 은경이의 장바구니</h1>
+<p>대학도서관 운영을 위해 조용히 담아둔 물품들입니다 😄</p>
 
-    <p>대학도서관 운영을 위해 조용히 담아둔 물품들입니다 😄</p>
+<div class="category">
+    <h2 class="toggle"><span>🔖</span>문구 / 사무용품</h2>
+    <ul>
+        <li>
+            <img src="https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?auto=format&fit=crop&w=80&q=80" alt="모서리 라운딩 펀치" />
+            <a href="https://example.com" target="_blank">모서리 라운딩 펀치</a>
+        </li>
+        <li>
+            <img src="https://images.unsplash.com/photo-1508385082359-f8e2ca15f0c4?auto=format&fit=crop&w=80&q=80" alt="색상 라벨 스티커" />
+            <a href="https://example.com" target="_blank">색상 라벨 스티커</a>
+        </li>
+        <li>
+            <img src="https://images.unsplash.com/photo-1516707570260-4f41c38d9a3d?auto=format&fit=crop&w=80&q=80" alt="A4 라벨지 (100매)" />
+            <a href="https://example.com" target="_blank">A4 라벨지 (100매)</a>
+        </li>
+    </ul>
+</div>
 
-    <div class="category">
-        <h2>🔖 문구 / 사무용품</h2>
-        <ul>
-            <li><a href="https://example.com" target="_blank">모서리 라운딩 펀치</a></li>
-            <li><a href="https://example.com" target="_blank">색상 라벨 스티커</a></li>
-            <li><a href="https://example.com" target="_blank">A4 라벨지 (100매)</a></li>
-        </ul>
-    </div>
+<div class="category">
+    <h2 class="toggle"><span>📦</span>보관 / 정리</h2>
+    <ul>
+        <li>
+            <img src="https://images.unsplash.com/photo-1590080877777-74e5b7213902?auto=format&fit=crop&w=80&q=80" alt="투명 플라스틱 수납박스" />
+            <a href="https://example.com" target="_blank">투명 플라스틱 수납박스</a>
+        </li>
+        <li>
+            <img src="https://images.unsplash.com/photo-1524492449090-93e11e2d7ae1?auto=format&fit=crop&w=80&q=80" alt="철제 책꽂이" />
+            <a href="https://example.com" target="_blank">철제 책꽂이</a>
+        </li>
+    </ul>
+</div>
+
+<div class="category">
+    <h2 class="toggle"><span>🧲</span>전시 / 게시</h2>
+    <ul>
+        <li>
+            <img src="https://images.unsplash.com/photo-1507668077129-56e32842fceb?auto=format&fit=crop&w=80&q=80" alt="강력 자석(대형)" />
+            <a href="https://example.com" target="_blank">강력 자석(대형)</a>
+        </li>
+        <li>
+            <img src="https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=80&q=80" alt="코르크보드 세트" />
+            <a href="https://example.com" target="_blank">코르크보드 세트</a>
+        </li>
+    </ul>
+</div>
+
+<script>
+document.querySelectorAll('.toggle').forEach(function(title) {
+    title.addEventListener('click', function() {
+        const ul = this.nextElementSibling;
+        if (ul.classList.contains('hidden')) {
+            ul.classList.remove('hidden');
+            ul.style.maxHeight = ul.scrollHeight + "px";
+        } else {
+            ul.style.maxHeight = 0;
+            ul.classList.add('hidden');
+        }
+    });
+});
+
+// 초기 접힘 상태 설정 (필요하면 true로 바꿔요)
+document.querySelectorAll('ul').forEach(function(ul) {
+    ul.style.maxHeight = ul.scrollHeight + "px";
+});
+</script>
 
 </body>
 </html>
